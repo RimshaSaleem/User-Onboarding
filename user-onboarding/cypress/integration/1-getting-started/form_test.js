@@ -4,11 +4,14 @@ describe("Testing Form Inputs", () => {
     });
     it("Inputs values", function () {
       cy.get("[data-cy=name]")
-        .type(" Rimsha Saleem")
+        .type("Rimsha Saleem")
         .should("have.value", "Rimsha Saleem");
+    
+    
       cy.get("[data-cy=email]")
         .type("rimsha@gmail.com")
-        .should("have.value", "rimsha@gmail");
+        .should("have.value", "rimsha@gmail.com");
+    
       cy.get("[data-cy=password]")
         .type("mypassword")
         .should("have.value", "mypassword");
@@ -28,4 +31,4 @@ describe("Testing Form Inputs", () => {
       cy.get("[data-cy=checkbox]").check().should("be.checked");
       cy.get("[data-cy=submit]").click();
     });
-  });
+   });
